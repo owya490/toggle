@@ -7,7 +7,7 @@ import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.dynamodb.DynamoDbClient;
 
 @Configuration
-public class DynamoConfig {
+public class DynamoDbConfig {
 
     @Bean
     public DynamoDbClient dynamoDbClientBean() {

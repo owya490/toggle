@@ -1,8 +1,7 @@
-package org.cdg.featureflags;
+package org.cdg.featureflags.services;
 
 import org.cdg.featureflags.models.Flag;
 import org.cdg.featureflags.models.ObjectRepository;
-import org.cdg.featureflags.services.DynamoDbService;
 import org.springframework.stereotype.Repository;
 import software.amazon.awssdk.services.dynamodb.model.AttributeValue;
 
