@@ -17,7 +17,7 @@ export const SideNavbar = () => {
         ["Documentation", <NavDocumentationSvg />],
     ];
     return (
-        <div className="bg-white h-screen w-1/6 pt-2 drop-shadow-sm z-50">
+        <div className="bg-white h-screen w-1/6 pt-2 drop-shadow-sm z-40">
             {/* <div className="ml-3 h-screen"> */}
             <div className="p-5">
                 <h1 className="font-extrabold text-2xl">Environment</h1>

@@ -12,6 +12,7 @@ export const FlagDetailText = ({
     const daysSinceCreation = Math.round(dateDiff(createdAt, now, "d"));
     return (
         <div className="block">
+            <h2 className="font-extralight text-xs">{id}</h2>
             <h1 className="font-extrabold text-lg">{name}</h1>
             <h3 className="font-light text-sm">{description}</h3>
             <h4 className="font-extralight text-xs">{`Created ${daysSinceCreation} days ago`}</h4>
