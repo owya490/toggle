@@ -13,8 +13,8 @@ import java.util.Optional;
 @RestController
 @RequestMapping(
         path = "/flag",
-        produces = MediaType.APPLICATION_JSON_VALUE
-//        consumes = MediaType.APPLICATION_JSON_VALUE
+        produces = MediaType.APPLICATION_JSON_VALUE,
+        consumes = MediaType.APPLICATION_JSON_VALUE
 )
 public class FlagController {
     @Autowired
@@ -28,14 +28,12 @@ public class FlagController {
 
     @PostMapping("/create")
     public ResponseEntity<String> createFlag(@RequestBody FlagRequest request) {
-        if (request.type.equals(FlagType.BOOLEAN)) {
-            flagRepository.upsert(new Flag(request.value));
+
+        if (request.type().equals(FlagType.BOOLEAN)) {
+            flagRepository.upsert(new Flag(request.value()));
+        } else {
+            return ResponseEntity.badRequest().body("Bad Request, needs to be BOOLEAN");
         }
         return ResponseEntity.ok("Upsert complete!");
-    }
-
-    @GetMapping("/test")
-    public ResponseEntity<String> test() {
-        return ResponseEntity.ok("Hello World!");
     }
 }

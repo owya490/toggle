@@ -1,8 +1,8 @@
 package org.cdg.featureflags.models;
 
 public enum FlagType {
-    BOOLEAN("boolean");
-//    INTEGER("integer"),
+    BOOLEAN("boolean"),
+    INTEGER("integer");
 //    STRING("string");
 
     public final String type;

@@ -2,6 +2,7 @@ package org.cdg.featureflags.services;
 
 import org.cdg.featureflags.models.Flag;
 import org.cdg.featureflags.models.ObjectRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import software.amazon.awssdk.services.dynamodb.model.AttributeValue;
 
@@ -10,11 +11,12 @@ import java.util.Optional;
 
 @Repository
 public class FlagRepository implements ObjectRepository<Flag> {
-    private static final String TABLE_NAME = "sampleTableName";
+    private static final String TABLE_NAME = "flag-service-db-v1";
 
     private static final String ID_KEY = "id";
 
     private static final String VALUE_KEY = "value";
+    @Autowired
     DynamoDbService dynamoDbService;
 
     @Override

@@ -1,5 +1,6 @@
 package org.cdg.featureflags.services;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import software.amazon.awssdk.services.dynamodb.DynamoDbClient;
 import software.amazon.awssdk.services.dynamodb.model.*;
@@ -11,6 +12,7 @@ import java.util.Optional;
 @Component
 public class DynamoDbService {
 
+    @Autowired
     DynamoDbClient ddb;
 
     public Optional<Map<String, AttributeValue>> getDynamoDBItem(String tableName, String key, String keyVal) {
@@ -26,7 +28,8 @@ public class DynamoDbService {
                 .build();
 
         try {
-            return Optional.of(ddb.getItem(request).item());
+//            return Optional.of(ddb.getItem(request).item());
+            return Optional.ofNullable(ddb.getItem(request).item());
 
         } catch (DynamoDbException e) {
             System.err.println(e.getMessage());
@@ -76,24 +79,26 @@ public class DynamoDbService {
                                 boolean updateVal) {
 
         HashMap<String, AttributeValue> itemKey = new HashMap<String, AttributeValue>();
-
+        System.out.println("world");
+        System.out.println(keyVal);
         itemKey.put(key, AttributeValue.builder().s(keyVal).build());
 
         HashMap<String, AttributeValueUpdate> updatedValues =
                 new HashMap<String, AttributeValueUpdate>();
-
+        System.out.println("hello");
         // Update the column specified by name with updatedVal
         updatedValues.put(name, AttributeValueUpdate.builder()
                 .value(AttributeValue.builder().bool(updateVal).build())
                 .action(AttributeAction.PUT)
                 .build());
 
+        System.out.println("hello1");
         UpdateItemRequest request = UpdateItemRequest.builder()
                 .tableName(tableName)
                 .key(itemKey)
                 .attributeUpdates(updatedValues)
                 .build();
-
+        System.out.println("hello2");
         try {
             ddb.updateItem(request);
         } catch (DynamoDbException e) {
