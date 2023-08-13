@@ -8,9 +8,9 @@ import org.immutables.value.Value;
 import org.springframework.lang.NonNull;
 
 @Value.Immutable
-@JsonSerialize(as = ImmutableFlagRequest.class)
-@JsonDeserialize(builder = ImmutableFlagRequest.Builder.class)
-public interface FlagRequest {
+@JsonSerialize(as = ImmutableFlagCreateRequest.class)
+@JsonDeserialize(builder = ImmutableFlagCreateRequest.Builder.class)
+public interface FlagCreateRequest {
     @NonNull
     FlagType type();
 
