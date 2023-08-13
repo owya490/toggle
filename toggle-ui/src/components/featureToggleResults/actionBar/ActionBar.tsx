@@ -5,7 +5,7 @@ import { NewToggleButton } from "./NewToggleButton";
 export const ActionBar = () => {
     return (
         <div className="bg-white w-full drop-shadow-sm p-4 grid grid-cols-4">
-            <div className="col-span-1 flex items-center ml-1">
+            <div className="col-span-2 flex items-center ml-1">
                 <NewToggleButton />
                 <div className="h-5/6 w-[1px] bg-gray-400 mx-4" />
                 <div className="flex items-center">
