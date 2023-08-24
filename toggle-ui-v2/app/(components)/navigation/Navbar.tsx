@@ -11,17 +11,17 @@ export default function Navbar() {
     const navTitles = ["Your Toggles", "Dashboards", "Teams"];
 
     return (
-        <nav className="fixed top-0 w-screen h-16 bg-white flex items-center">
+        <nav className="fixed top-0 w-screen h-16 bg-white flex items-center drop-shadow-md z-50">
             <Image src={Logo} alt="" className="w-16 mr-1 ml-8" />
             <h1 className="text-4xl font-montserrat-bold">Toggle</h1>
-            <div className="mx-10 flex items-center">
+            <div className="hidden xl:flex mx-10  items-center">
                 {navTitles.map((title, idx) => {
                     return (
                         <button
                             id={`${idx}`}
                             className="mx-4 flex items-center py-0.5 px-2.5 rounded-md hover:bg-secondary"
                         >
-                            <h2 className="text-2xl text-[#6A6A6B] font-montserrat">
+                            <h2 className="text-2xl text-[#6A6A6B] whitespace-nowrap font-montserrat">
                                 {title}
                             </h2>
                             <Image
@@ -33,9 +33,10 @@ export default function Navbar() {
                     );
                 })}
             </div>
-
-            <NewToggleButton />
-            <div className="w-1/5 ml-auto">
+            <div className="mx-10">
+                <NewToggleButton />
+            </div>
+            <div className="w-1/3 xl:w-1/5 ml-auto">
                 <SearchBar />
             </div>
         </nav>
