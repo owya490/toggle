@@ -29,6 +29,7 @@ export default function Navbar() {
                 {navTitles.map((title, idx) => {
                     return (
                         <button
+                            key={`${idx}`}
                             id={`${idx}`}
                             className="mx-4 flex items-center py-0.5 px-2.5 rounded-md hover:bg-secondary"
                         >
