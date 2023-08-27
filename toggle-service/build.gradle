@@ -24,6 +24,7 @@ dependencies {
     implementation platform('software.amazon.awssdk:bom:2.20.56')
     implementation 'software.amazon.awssdk:dynamodb:2.20.118'
     implementation 'org.immutables:value:2.9.2'
+    implementation 'com.google.code.findbugs:jsr305:3.0.2'
 
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
@@ -33,3 +34,8 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+
+// ec2-54-253-24-84.ap-southeast-2.compute.amazonaws.com
+
+//scp -i ./toggle_login.pem ./toggle-service-1.0-SNAPSHOT.jar ec2-user@ec2-54-253-24-84.ap-southeast-2.compute.amazonaws.com:/home/ec2-user/file

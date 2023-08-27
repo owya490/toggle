@@ -12,10 +12,15 @@ import org.springframework.lang.NonNull;
 @JsonDeserialize(builder = ImmutableFlagCreateRequest.Builder.class)
 public interface FlagCreateRequest {
     @NonNull
-    FlagType type();
+    FlagType getType();
+
+    @NonNull
+    String getName();
 
     @JsonProperty("value")
-    boolean value();
+    boolean getValue();
+
+    boolean getDefaultServe();
 }
 
 
