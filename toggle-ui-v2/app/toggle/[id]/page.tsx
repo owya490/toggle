@@ -1,7 +1,7 @@
 "use client";
 
-import Select from "@/app/(components)/input/Select";
-import Toggle from "@/app/(components)/input/Toggle";
+import Select from "@/app/_components/input/Select";
+import Toggle from "@/app/_components/input/Toggle";
 import { useState } from "react";
 
 export default function ToggleIdPage({ params }: any) {
@@ -57,7 +57,10 @@ export default function ToggleIdPage({ params }: any) {
                             <h2 className="font-bold mb-2">Activate Toggle</h2>
                             <div className="flex space-x-2 text-sm items-center">
                                 <span>OFF</span>
-                                <Toggle size="medium" />
+                                <Toggle
+                                    size="medium"
+                                    onChangeActions={() => {}}
+                                />
                                 <span>ON</span>
                             </div>
                         </div>
