@@ -1,7 +1,6 @@
 export const BranchSvg = () => {
     return (
         <svg
-            className="w-4 h-4 text-gray-500 dark:text-gray-400"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -21,11 +20,10 @@ export const BranchSvg = () => {
 export const SearchSvg = () => {
     return (
         <svg
-            className="w-4 h-4"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
-            viewBox="0 0 20 20"
+            viewBox="0 0 24 24"
         >
             <path
                 stroke="currentColor"
