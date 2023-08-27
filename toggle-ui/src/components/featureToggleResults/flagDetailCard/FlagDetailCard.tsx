@@ -6,7 +6,7 @@ import { FlagToggle } from "./FlagToggle";
 
 export const FlagDetailCard = ({ toggle }: { toggle: BooleanFlagType }) => {
     return (
-        <div className="w-full py-7 bg-white grid grid-cols-4 items-center rounded-md">
+        <div className="w-full py-7 bg-[#FBFBFE] grid grid-cols-4 items-center rounded-md">
             {/* <div className="grid grid-cols-4 items-center"> */}
             <div className="col-span-2 flex items-center">
                 <div className="mx-5">

@@ -8,11 +8,11 @@ export const NavToggleSvg = ({ isWhite }: { isWhite?: boolean }) => {
             fill="#000000"
             className="w-9 h-9"
         >
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
             <g
                 id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
             ></g>
             <g id="SVGRepo_iconCarrier">
                 {" "}
@@ -21,7 +21,7 @@ export const NavToggleSvg = ({ isWhite }: { isWhite?: boolean }) => {
                 <g
                     id="Page-1"
                     stroke="none"
-                    stroke-width="1"
+                    strokeWidth="1"
                     fill="none"
                     fill-rule="evenodd"
                 >
@@ -53,20 +53,20 @@ export const NavUserSvg = ({ isWhite }: { isWhite?: boolean }) => {
             xmlns="http://www.w3.org/2000/svg"
             className="w-9 h-9"
         >
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
             <g
                 id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
             ></g>
             <g id="SVGRepo_iconCarrier">
                 {" "}
                 <path
                     d="M5 21C5 17.134 8.13401 14 12 14C15.866 14 19 17.134 19 21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
                     stroke="#000000"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                 ></path>{" "}
             </g>
         </svg>
@@ -81,11 +81,11 @@ export const NavConfigureSvg = ({ isWhite }: { isWhite?: boolean }) => {
             xmlns="http://www.w3.org/2000/svg"
             className="h-8 w-8"
         >
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
             <g
                 id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
             ></g>
             <g id="SVGRepo_iconCarrier">
                 {" "}
@@ -107,11 +107,11 @@ export const NavDashboardSvg = ({ isWhite }: { isWhite?: boolean }) => {
             xmlns="http://www.w3.org/2000/svg"
             className="h-9 w-9"
         >
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
             <g
                 id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
             ></g>
             <g id="SVGRepo_iconCarrier">
                 {" "}
@@ -132,11 +132,11 @@ export const NavQuickStartSvg = ({ isWhite }: { isWhite?: boolean }) => {
             xmlns="http://www.w3.org/2000/svg"
             className="h-9 w-9"
         >
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
             <g
                 id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
             ></g>
             <g id="SVGRepo_iconCarrier">
                 {" "}
@@ -161,11 +161,11 @@ export const NavDocumentationSvg = ({ isWhite }: { isWhite?: boolean }) => {
             xmlns="http://www.w3.org/2000/svg"
             className="h-9 w-9"
         >
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
             <g
                 id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
             ></g>
             <g id="SVGRepo_iconCarrier">
                 {" "}
@@ -196,11 +196,11 @@ export const NavPlusSvg = ({ isWhite }: { isWhite?: boolean }) => {
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5"
         >
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
             <g
                 id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
             ></g>
             <g id="SVGRepo_iconCarrier">
                 {" "}
@@ -208,9 +208,9 @@ export const NavPlusSvg = ({ isWhite }: { isWhite?: boolean }) => {
                     d="M4 12H20M12 4V20"
                     stroke={isWhite ? "#ffffff" : "#000000"}
                     fill={isWhite ? "#ffffff" : "#000000"}
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                 ></path>{" "}
             </g>
         </svg>
@@ -225,11 +225,11 @@ export const NavEnvironmentSvg = () => {
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6"
         >
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
             <g
                 id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
             ></g>
             <g id="SVGRepo_iconCarrier">
                 {" "}

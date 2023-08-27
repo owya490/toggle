@@ -16,10 +16,10 @@ import { Route, BrowserRouter, Routes } from "react-router-dom";
 // });
 function App() {
     const [searchedFlag, setSearchedFlag] = useState(
-        new BooleanFlagType("", false)
+        new BooleanFlagType("123", false)
     );
     return (
-        <div className="bg-secondary h-screen w-screen">
+        <div className="bg-white h-screen w-screen">
             <div className="flex">
                 <SideNavbar />
                 <div className="w-full">
