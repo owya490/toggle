@@ -60,6 +60,7 @@ export default function CreateToggleDialog({
                                                 initialValues={{
                                                     name: "",
                                                     type: ToggleTypes.BOOLEAN,
+                                                    value: false,
                                                     default: false,
                                                 }}
                                                 onSubmit={(
@@ -142,6 +143,9 @@ export default function CreateToggleDialog({
                                                                         False
                                                                     </span>
                                                                     <Toggle
+                                                                        isChecked={
+                                                                            false
+                                                                        }
                                                                         size="small"
                                                                         onChangeActions={(
                                                                             value

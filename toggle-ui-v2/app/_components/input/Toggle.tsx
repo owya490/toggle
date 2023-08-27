@@ -2,13 +2,15 @@ import { Switch } from "@headlessui/react";
 import { useState } from "react";
 
 export default function Toggle({
+    isChecked,
     size,
     onChangeActions,
 }: {
+    isChecked: boolean;
     size: string;
     onChangeActions: (value: boolean) => void;
 }) {
-    const [enabled, setEnabled] = useState(false);
+    const [enabled, setEnabled] = useState(isChecked);
     switch (size) {
         case "small":
             return (
@@ -35,7 +37,11 @@ export default function Toggle({
             return (
                 <Switch
                     checked={enabled}
-                    onChange={setEnabled}
+                    onChange={() => {
+                        const prev = enabled;
+                        setEnabled(!prev);
+                        onChangeActions(!prev);
+                    }}
                     className={`${enabled ? "bg-green-600" : "bg-gray-400"}
                   relative inline-flex h-[29px] w-[53px] shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2  focus-visible:ring-white focus-visible:ring-opacity-75`}
                 >
@@ -52,7 +58,11 @@ export default function Toggle({
             return (
                 <Switch
                     checked={enabled}
-                    onChange={setEnabled}
+                    onChange={() => {
+                        const prev = enabled;
+                        setEnabled(!prev);
+                        onChangeActions(!prev);
+                    }}
                     className={`${enabled ? "bg-green-600" : "bg-gray-400"}
                       relative inline-flex h-[38px] w-[74px] shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2  focus-visible:ring-white focus-visible:ring-opacity-75`}
                 >

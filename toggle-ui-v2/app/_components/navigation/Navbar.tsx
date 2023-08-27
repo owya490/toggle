@@ -11,7 +11,7 @@ import { SearchBar } from "./SearchBar";
 export default function Navbar() {
     const navTitles = ["Your Toggles", "Dashboards", "Teams"];
 
-    let [isOpen, setIsOpen] = useState(true);
+    let [isOpen, setIsOpen] = useState(false);
 
     function closeModal() {
         setIsOpen(false);
