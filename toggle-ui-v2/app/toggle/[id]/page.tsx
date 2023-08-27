@@ -46,6 +46,7 @@ export default function ToggleIdPage({ params }: any) {
                                 {tabTitles.map((title, idx) => {
                                     return (
                                         <button
+                                            key={`${idx}`}
                                             className={`px-4 ${
                                                 tab === idx
                                                     ? "border-b-2 border-black"
