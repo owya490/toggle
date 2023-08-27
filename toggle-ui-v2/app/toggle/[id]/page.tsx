@@ -19,7 +19,7 @@ export default function ToggleIdPage({ params }: any) {
 
     useEffect(() => {
         fetch(
-            "http://ec2-54-253-24-84.ap-southeast-2.compute.amazonaws.com:8080/flag/025efb62-b697-4e8b-984b-ab9136657ff7",
+            "https://ec2-54-253-24-84.ap-southeast-2.compute.amazonaws.com:8080/flag/025efb62-b697-4e8b-984b-ab9136657ff7",
             { method: "GET", headers: { "Content-Type": "application/json" } }
         ).then(async (data) => {
             const jsonData = await data.json();
@@ -81,7 +81,7 @@ export default function ToggleIdPage({ params }: any) {
                                     size="medium"
                                     onChangeActions={(value) => {
                                         fetch(
-                                            "http://ec2-54-253-24-84.ap-southeast-2.compute.amazonaws.com:8080/flag/update",
+                                            "https://ec2-54-253-24-84.ap-southeast-2.compute.amazonaws.com:8080/flag/update",
                                             {
                                                 method: "POST",
                                                 headers: {
