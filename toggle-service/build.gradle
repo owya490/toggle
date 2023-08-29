@@ -36,6 +36,6 @@ test {
 }
 
 
-// ec2-54-253-24-84.ap-southeast-2.compute.amazonaws.com
+// ec2-52-64-122-55.ap-southeast-2.compute.amazonaws.com
 
-//scp -i ./toggle_login.pem ./toggle-service-1.0-SNAPSHOT.jar ec2-user@ec2-54-253-24-84.ap-southeast-2.compute.amazonaws.com:/home/ec2-user/file
+//scp -i ./toggle_login.pem ./toggle-service-1.0-SNAPSHOT.jar ec2-user@ec2-52-64-122-55.ap-southeast-2.compute.amazonaws.com:/home/ec2-user/file
