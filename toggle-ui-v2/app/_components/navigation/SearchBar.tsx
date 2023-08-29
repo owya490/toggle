@@ -1,11 +1,14 @@
-import { BranchSvg, SearchSvg } from "../../resources/svgs/SearchBarSvgs";
+"use client";
+
+import Image from "next/image";
 import { Formik, Field, Form } from "formik";
 
-export const SearchBar = ({
-    handleSearchSubmit,
-}: {
-    handleSearchSubmit: (id: string) => void;
-}) => {
+import MagnifyGlass from "./../../../asset/svgs/MagnifyGlass.svg";
+import GitBranch from "./../../../asset/svgs/GitBranch.svg";
+
+export const SearchBar = () => {
+    function handleSearchSubmit(text: string) {}
+
     return (
         <Formik
             initialValues={{
@@ -19,7 +22,7 @@ export const SearchBar = ({
             <Form className="flex items-center pr-5">
                 <div className="relative w-full">
                     <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                        <BranchSvg />
+                        <Image src={GitBranch} alt="" className="w-5 h-5" />
                     </div>
                     <Field
                         id="searchText"
@@ -31,9 +34,9 @@ export const SearchBar = ({
                 </div>
                 <button
                     type="submit"
-                    className="p-2.5 ml-2 text-sm font-medium text-white bg-primary hover:bg-[#352ca6] rounded-lg border"
+                    className="p-2 ml-2 text-sm font-medium text-white bg-primary hover:bg-[#352ca6] rounded-lg border"
                 >
-                    <SearchSvg />
+                    <Image src={MagnifyGlass} alt="" className="w-6" />
                 </button>
             </Form>
         </Formik>

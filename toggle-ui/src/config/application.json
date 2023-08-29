@@ -1,0 +1,4 @@
+{
+    "new-toggle-url": "http://localhost:8080/flag/create",
+    "search-toggle-url": "http://localhost:8080/flag/"
+}

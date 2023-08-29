@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: "montserrat-light";
+        font-weight: 100;
+        src: url("./../resources/Montserrat-Light.ttf");
+    }
+
+    @font-face {
+        font-family: "montserrat";
+        font-weight: 400;
+        src: url("./../resources/Montserrat-Regular.ttf");
+    }
+
+    @font-face {
+        font-family: "montserrat-bold";
+        font-weight: 900;
+        src: url("./../resources/Montserrat-Bold.ttf");
+    }
+
+    body {
+        @apply bg-[#e5e7eb];
+    }
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
+}
