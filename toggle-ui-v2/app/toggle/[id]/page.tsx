@@ -19,7 +19,8 @@ export default function ToggleIdPage({ params }: any) {
 
     useEffect(() => {
         fetch(
-            "https://ec2-54-253-24-84.ap-southeast-2.compute.amazonaws.com:8080/flag/025efb62-b697-4e8b-984b-ab9136657ff7",
+            // "https://ec2-54-253-24-84.ap-southeast-2.compute.amazonaws.com:8080/flag/025efb62-b697-4e8b-984b-ab9136657ff7",
+            `https://52.64.122.55:8080/flag/${params.id}`,
             { method: "GET", headers: { "Content-Type": "application/json" } }
         ).then(async (data) => {
             const jsonData = await data.json();
@@ -38,6 +39,7 @@ export default function ToggleIdPage({ params }: any) {
                             <h1 className="text-4xl mb-2">{toggle.name}</h1>
                             <code className="bg-[#f1f1f1] py-0.5 px-2 rounded-md text-xs">
                                 {toggle.id}
+                                {/* {params.id} */}
                             </code>
                             <h3 className="my-6">
                                 I determine if the user can see admin tools.
@@ -81,7 +83,8 @@ export default function ToggleIdPage({ params }: any) {
                                     size="medium"
                                     onChangeActions={(value) => {
                                         fetch(
-                                            "https://ec2-54-253-24-84.ap-southeast-2.compute.amazonaws.com:8080/flag/update",
+                                            // "https://ec2-54-253-24-84.ap-southeast-2.compute.amazonaws.com:8080/flag/update",
+                                            "https://52.64.122.55:8080/flag/update",
                                             {
                                                 method: "POST",
                                                 headers: {
