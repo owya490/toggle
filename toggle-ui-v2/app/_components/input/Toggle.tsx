@@ -17,6 +17,7 @@ export default function Toggle({
                 <Switch
                     checked={enabled}
                     onChange={() => {
+                        console.log("switch changed");
                         const prev = enabled;
                         setEnabled(!prev);
                         onChangeActions(!prev);
@@ -38,6 +39,7 @@ export default function Toggle({
                 <Switch
                     checked={enabled}
                     onChange={() => {
+                        console.log("switch changed");
                         const prev = enabled;
                         setEnabled(!prev);
                         onChangeActions(!prev);
@@ -59,6 +61,8 @@ export default function Toggle({
                 <Switch
                     checked={enabled}
                     onChange={() => {
+                        console.log("switch changed");
+
                         const prev = enabled;
                         setEnabled(!prev);
                         onChangeActions(!prev);

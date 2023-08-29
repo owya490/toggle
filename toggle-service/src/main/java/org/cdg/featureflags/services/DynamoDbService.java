@@ -1,5 +1,7 @@
 package org.cdg.featureflags.services;
 
+import org.cdg.featureflags.utils.Pair;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import software.amazon.awssdk.services.dynamodb.DynamoDbClient;
 import software.amazon.awssdk.services.dynamodb.model.*;
@@ -11,6 +13,7 @@ import java.util.Optional;
 @Component
 public class DynamoDbService {
 
+    @Autowired
     DynamoDbClient ddb;
 
     public Optional<Map<String, AttributeValue>> getDynamoDBItem(String tableName, String key, String keyVal) {
@@ -26,7 +29,8 @@ public class DynamoDbService {
                 .build();
 
         try {
-            return Optional.of(ddb.getItem(request).item());
+//            return Optional.of(ddb.getItem(request).item());
+            return Optional.ofNullable(ddb.getItem(request).item());
 
         } catch (DynamoDbException e) {
             System.err.println(e.getMessage());
@@ -72,35 +76,35 @@ public class DynamoDbService {
     public void updateTableItem(String tableName,
                                 String key,
                                 String keyVal,
-                                String name,
-                                boolean updateVal) {
+//                                String name,
+//                                boolean updateVal,
+                                Map<String, Pair<String, ?>> updateMap) {
 
         HashMap<String, AttributeValue> itemKey = new HashMap<String, AttributeValue>();
-
+        System.out.println(keyVal);
         itemKey.put(key, AttributeValue.builder().s(keyVal).build());
 
         HashMap<String, AttributeValueUpdate> updatedValues =
                 new HashMap<String, AttributeValueUpdate>();
-
         // Update the column specified by name with updatedVal
-        updatedValues.put(name, AttributeValueUpdate.builder()
-                .value(AttributeValue.builder().bool(updateVal).build())
-                .action(AttributeAction.PUT)
-                .build());
+
+        updateMap.forEach((updateKey, updateValue) -> updatedValues.put(updateKey, AttributeValueUpdate.builder().value(updateAttributeBuilder(updateValue)).action(AttributeAction.PUT).build()));
+//        updatedValues.put(name, AttributeValueUpdate.builder()
+//                .value(AttributeValue.builder().bool(updateVal).build())
+//                .action(AttributeAction.PUT)
+//                .build());
 
         UpdateItemRequest request = UpdateItemRequest.builder()
                 .tableName(tableName)
                 .key(itemKey)
                 .attributeUpdates(updatedValues)
                 .build();
-
         try {
             ddb.updateItem(request);
         } catch (DynamoDbException e) {
             System.err.println(e.getMessage());
         }
 
-        System.out.println("Done!");
     }
 
     public void deleteDynamoDBItem(String tableName, String key, String keyVal) {
@@ -122,6 +126,17 @@ public class DynamoDbService {
         } catch (DynamoDbException e) {
             System.err.println(e.getMessage());
         }
+    }
+
+    private static AttributeValue updateAttributeBuilder(Pair<String, ?> updatePair) {
+        AttributeValue.Builder builder = AttributeValue.builder();
+        return switch (updatePair.left()) {
+            // TODO add map and list support
+            case "BOOL" -> builder.bool((Boolean) updatePair.right()).build();
+            case "S" -> builder.s((String) updatePair.right()).build();
+            case "N" -> builder.n(((Long) updatePair.right()).toString()).build();
+            default -> null;
+        };
     }
 
 }
