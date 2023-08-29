@@ -20,7 +20,7 @@ export default function ToggleIdPage({ params }: any) {
     useEffect(() => {
         fetch(
             // "https://ec2-54-253-24-84.ap-southeast-2.compute.amazonaws.com:8080/flag/025efb62-b697-4e8b-984b-ab9136657ff7",
-            `https://52.64.122.55:8080/flag/${params.id}`,
+            `https://www.toggleserver.xyz:8080/flag/${params.id}`,
             { method: "GET", headers: { "Content-Type": "application/json" } }
         ).then(async (data) => {
             const jsonData = await data.json();
@@ -84,7 +84,7 @@ export default function ToggleIdPage({ params }: any) {
                                     onChangeActions={(value) => {
                                         fetch(
                                             // "https://ec2-54-253-24-84.ap-southeast-2.compute.amazonaws.com:8080/flag/update",
-                                            "https://52.64.122.55:8080/flag/update",
+                                            "https://www.toggleserver.xyz:8080/flag/update",
                                             {
                                                 method: "POST",
                                                 headers: {
@@ -114,7 +114,7 @@ export default function ToggleIdPage({ params }: any) {
                                             {
                                                 id: 1,
                                                 name: "False",
-                                                image: "https://www.icolorpalette.com/download/solidcolorimage/ff6961_solid_color_background_icolorpalette.png",
+                                                image: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEWNGRoo9eVrAAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC",
                                             },
                                             {
                                                 id: 2,
