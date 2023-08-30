@@ -1,13 +1,13 @@
 package org.cdg.featureflags.models;
 
-public enum FlagType {
+public enum ToggleType {
     BOOLEAN("boolean"),
     INTEGER("integer");
 //    STRING("string");
 
     public final String type;
 
-    FlagType(String type) {
+    ToggleType(String type) {
         this.type = type;
     }
 }

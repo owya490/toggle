@@ -7,9 +7,9 @@ import org.springframework.lang.NonNull;
 import org.springframework.lang.Nullable;
 
 @Value.Immutable
-@JsonSerialize(as = ImmutableFlagUpdateRequest.class)
-@JsonDeserialize(builder = ImmutableFlagUpdateRequest.Builder.class)
-public interface FlagUpdateRequest {
+@JsonSerialize(as = ImmutableToggleUpdateRequest.class)
+@JsonDeserialize(builder = ImmutableToggleUpdateRequest.Builder.class)
+public interface ToggleUpdateRequest {
     @NonNull
     String getId();
 
